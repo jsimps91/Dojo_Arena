@@ -6,9 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").hover(function(){
+                var x = "url(" + $(this).attr("photoSrc") + ")";
+                $("#background").css("background-image", x);
+            });
+        })
+    </script>
 </head>
-
 <body>
+    <div id="wrapper">
+        <div id="background">
+            <img id="image" src="" alt="">
+            <div id="box">
+                <h1>Select Arena</h1>
+                <button id="beach" photoSrc="Photos/beach.jpg">beach</button>
+                <button id="planet" photoSrc="Photos/earth.jpg">planet</button>
+                <button id="dojo" photoSrc="Photos/dojo.jpg">dojo</button>
+                <button id="forest" photoSrc="Photos/forest.jpg">forest</button>
+                <button id="matrix"photoSrc="Photos/matrix.jpg">matrix</button>
+                <button id="snow" photoSrc="Photos/snow.jpg">snow</button>
+            </div>
+
+        </div>
+    </div>    
     
 </body>
 </html>
